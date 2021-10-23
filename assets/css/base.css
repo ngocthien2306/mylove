@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 :root {
     --primary-color: #E67E22;
     --white-color: #fff;
@@ -74,8 +75,8 @@
     font-weight: 400;
     min-height: 100vh;
     color: #333;
-    background: #0b1522;
-    display: flex;
+    background:#ECF0F1;
+
     justify-content: center;
   }
   /* Responsive*/
@@ -83,7 +84,6 @@
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
-  
   }
   .grid_full-width {
     width: 100%;

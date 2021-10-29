@@ -22,7 +22,7 @@
 
 .app {
     display: block;
-    background: #F0F3F4;
+    width: 100%;
     z-index: 1;
     position: relative;
 }
@@ -46,13 +46,19 @@
     border-radius: 50px;
     box-shadow: 10px 10px 90px #f20044;
 }
-.img-me, .img-you {
-    width: 200px;
+
+.male-info {
     justify-content: center;
     align-items: center;
-    margin: 125px 102px;
-    z-index: 10;
+    margin: auto;
 }
+div.img {
+    padding-top: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
 .love-box {
     margin: -100px 0;
     font-family: 'Satisfy', cursive;
@@ -65,7 +71,7 @@ section i {
     background: rgb(236, 81, 81);
     border-radius: 100%;
     z-index: 1;
-    animation: bubble 5s linear infinite;
+    animation: bubble 7s linear infinite;
 }
 section i:nth-child(even) {
     background: transparent;

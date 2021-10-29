@@ -71,17 +71,25 @@
     font-family: 'Roboto', sans-serif;
 
   }
+  img.img-you {
+    width: 100%;
+    margin-top: -90%;
+  }
+  img.img-me {
+    width: 110%;
+    margin-top: -80%;
+  }
   body {
     font-weight: 400;
     min-height: 100vh;
     color: #333;
-    background:#ECF0F1;
+    background: var(--bs-white);
 
     justify-content: center;
   }
   /* Responsive*/
   .grid {
-    width: 1200px;
+    width: 1400px;
     max-width: 100%;
     margin: 0 auto;
   }
@@ -112,6 +120,7 @@
     padding-left: 5px;
     padding-right: 5px;
     width: 33.33%;
+  
   }
   .grid_column-5 {
     padding-left: 5px;

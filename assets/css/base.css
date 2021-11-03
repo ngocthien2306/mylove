@@ -71,14 +71,7 @@
     font-family: 'Roboto', sans-serif;
 
   }
-  img.img-you {
-    width: 100%;
-    margin-top: -90%;
-  }
-  img.img-me {
-    width: 110%;
-    margin-top: -80%;
-  }
+
   body {
     font-weight: 400;
     min-height: 100vh;
@@ -89,7 +82,7 @@
   }
   /* Responsive*/
   .grid {
-    width: 1400px;
+    width: 1300px;
     max-width: 100%;
     margin: 0 auto;
   }

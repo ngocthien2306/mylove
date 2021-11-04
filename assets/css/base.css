@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Satisfy&display=swap');
 :root {
     --primary-color: #E67E22;
+    
     --white-color: #fff;
     --blue-color: #59B7F2;
     --green-color: #17F058;
@@ -68,7 +71,7 @@
     font-size: 62.5%;
     box-sizing: border-box;
     line-height: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cormorant Garamond', sans-serif;
 
   }
 

@@ -58,6 +58,33 @@ img.img-me {
     justify-content: center;
     align-items: center;
     margin: auto;
+    position: relative;
+}
+
+.touch-me {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--heart-red);
+  background-color: transparent;
+  font-size: 20px;
+  top: calc(34% + 3px);
+  left: 50%;
+  position: absolute;
+  animation: myheart  0.8s linear infinite;
+  z-index: 20;
+}
+@keyframes myheart {
+  0% {
+      transform: rotate(0deg) scale(1.07);
+  }
+  80% {
+      transform: rotate(0deg) scale(1);
+  }
+  100% {
+      transform: rotate(0deg) scale(0.8);
+  }
 }
 div.img {
     padding-top: 100%;
@@ -82,6 +109,7 @@ section i {
     border-radius: 100%;
     z-index: 1;
     animation: bubble 7s linear infinite;
+    
 }
 section i:nth-child(even) {
     background: transparent;
@@ -105,18 +133,77 @@ section i:nth-child(even) {
 }
 
 /*  */
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
-html, body, .container {
-  height: 100%;
-  font-family: 'Kaushan Script','Sail', cursive;
+.dnone {
+  display: block;
+}
+.video-log {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(88, 63, 63); /* Fallback color */
+  background-color: rgba(236, 129, 138,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  transition: 3s;
 }
 
+@keyframes fadeIn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.display-flex {
+  display: flex;
+}
+.video-box {
+  width: 45%;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  box-shadow: -10px 10px 90px rgba(232, 96, 108, 0.7);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+}
+.love-message {
+
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 17px;
+  width: 100%;
+  margin: 10px 5px;
+  padding: 2px;
+}
+span.red-color {
+  font-weight: 700;
+  font-size: 22px;
+  color: #333;
+}
+#our-video {
+
+  margin: 6px 5px;
+  height: 450px;
+  border-radius: 10px;
+}
+p.title-mes {
+  line-height: 24px;
+}
+html, body, .container {
+  height: 100%;
+  font-family: 'Satisfy','Sail', sans-serif;
+}
+/*
 body {
   background: #e74;
   overflow: hidden;
   background-image: linear-gradient(to bottom, #190e14, #0d0d4b 30%, #c76075 80%, #e9b64b 95%);
   background-image: radial-gradient(circle at center bottom, #e9b64b, #c76075 15%, #0d0d4b 75%, #190e14 90%);
 }
+*/
 
 div#beach,
 canvas#canvas {
@@ -125,13 +212,14 @@ canvas#canvas {
   left: 0;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 div#beach {
   background-image: url(https://dl.dropbox.com/s/oe0oce2udq44bj5/beachsil2.png);
   /* background-size: cover; */
   background-position: bottom right;
-  background-size: 1700px;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -553,6 +641,7 @@ div#sea {
     right: 40%;
     bottom: 15%;
     position: absolute;
+    display: none;
   }
 
   div#video iframe {

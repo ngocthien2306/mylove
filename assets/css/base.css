@@ -171,8 +171,9 @@
     background-color: #FEF5E7;
   }
   .btn-primary {
-    background-color: var(--blue-color);
+    background-color: var(--heart-red);
     color: #fff;
+    border-radius: 30px;
   }
   .select-input {
     height: 34px;

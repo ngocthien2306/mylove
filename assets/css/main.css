@@ -1,3 +1,116 @@
+@media screen and (max-width: 767px) {
+  .grid #myheart {
+    font-size: 10px;
+    margin-top: -10px;
+    margin-left: -4px;
+  }
+  .grid .day-love {
+    font-size: 13px;
+  }
+  #merrywrap .row span {
+    color:var(--heart-red);
+    text-shadow: 4px 4px 0 rgba(96, 125, 139, 0.4);
+    font-size: 20px;
+    display: inline-block;
+    opacity: 1;
+    margin: 6px 0;
+  }
+  .app {
+    margin-top: 45%;
+  }
+  .grid .heart {
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    margin: 40% 38%;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 60px #f20044;
+    animation: heart  0.8s linear infinite;
+}
+  .grid .heart::before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 60px #f20044;
+}
+  .grid .heart::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+.grid .love-box {
+  margin: 1px 0 0 0;
+}
+.grid .box-heading {
+  font-size: 15px;
+}
+.grid .hpbd-text {
+  font-size: 9px;
+}
+.grid .img-me {
+  margin-left: 25px;
+}
+.grid .video-log {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(88, 63, 63); /* Fallback color */
+  background-color: rgba(236, 129, 138,0.6); /* Black w/ opacity */
+  padding-top: 60px;
+  transition: 3s;
+  
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.display-flex {
+  display: flex;
+}
+.grid .video-box {
+  width: 70%;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  box-shadow: -10px 10px 90px rgba(232, 96, 108, 0.7);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: block;
+
+}
+.grid #our-video {
+  width: 265px;
+  height: 200px;
+}
+  .grid p.title-mes {
+    font-size: 16px;
+    margin: 0 3px;
+  }
+  .grid span.red-color {
+    font-size: 20px;
+  }
+  .grid #btn-close {
+    margin-left: 165px;
+  }
+}
+
 .heart {
     height: 90px;
     width: 90px;
@@ -8,7 +121,15 @@
     box-shadow: -10px 10px 90px #f20044;
     animation: heart  0.8s linear infinite;
 }
+.hidden {
+  display: none;
+}
+.day-love {
+  left: 50%;
+  padding: 10% 0 0 0;
+  font-size: 23px;
 
+}
 @keyframes heart {
     0% {
         transform: rotate(-45deg) scale(1.07);
@@ -48,6 +169,7 @@ img.img-you {
     width: 60%;
     margin-top: -90%;
     margin-left: 25%;
+    z-index: 10;
   }
 img.img-me {
     width: 65%;
@@ -105,16 +227,13 @@ h4.box-heading {
 }
 section i {
     position: absolute;
-    background: rgb(236, 81, 81);
-    border-radius: 100%;
+    color: rgb(236, 81, 81);
+
     z-index: 1;
     animation: bubble 7s linear infinite;
     
 }
-section i:nth-child(even) {
-    background: transparent;
-    border: 1px solid rgb(236, 81, 81);
-}
+
 @keyframes bubble {
     0% {
         transform: translateY(0);
@@ -145,7 +264,7 @@ section i:nth-child(even) {
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(88, 63, 63); /* Fallback color */
-  background-color: rgba(236, 129, 138,0.4); /* Black w/ opacity */
+  background-color: rgba(236, 129, 138,0.6); /* Black w/ opacity */
   padding-top: 60px;
   transition: 3s;
 }
@@ -168,15 +287,24 @@ section i:nth-child(even) {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: flex;
+
 }
 .love-message {
-
   color: var(--white-color);
   font-weight: 400;
   font-size: 17px;
   width: 100%;
   margin: 10px 5px;
   padding: 2px;
+}
+.mr {
+  margin: 60% 0 0 70%
+}
+.btn-heart {
+  background: var(--heart-red);
+}
+p.title-mes {
+  display: inline-block;
 }
 span.red-color {
   font-weight: 700;
@@ -375,6 +503,7 @@ div#sea {
   font-size: 50px;
   display: inline-block;
   opacity: 0;
+  margin: 15px 0;
   transition: transform 0.5s ease-in, opacity 0.7s;
 }
 
@@ -618,39 +747,4 @@ div#sea {
   right: 25px;
 }
 
-@media (min-width: 1000px) {
-  .icons {
-    left: 30px;
-  }
-
-  .icons .row span {
-    font-size: 56px;
-  }
-
-  #people {
-    left: 80px;
-    bottom: 70px;
-    width: 160px;
-  }
-
-  div#beach {
-    background-size: 2000px;
-  }
-
-  div#video {
-    right: 40%;
-    bottom: 15%;
-    position: absolute;
-    display: none;
-  }
-
-  div#video iframe {
-    width: 400px;
-    height: 250px;
-  }
-
-  .moon {
-    right: 230px;
-  }
-}
 

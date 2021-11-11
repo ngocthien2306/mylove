@@ -34,15 +34,20 @@
   
         </div>
         <div class="grid_column-4">
+          <h1 class="day-love">
+            
+          </h1>
           <div class="heart">
+            
                 
           </div>
+          
           <br/> 
           
           <div class="love-box">
-            <h4 class="box-heading">Đang yêu 456 ngày</h4> <br> 
+            <h4 class="box-heading">Đang yêu <span class="day"></span> ngày</h4> <br> 
             <p class="hpbd-text">Gửi tục tưng của anh 😘, </p>
-            <p class="hpbd-text">Chúng mình đã yêu nhau được 1 năm, 3 tháng, 4 ngày, 15 giờ, 49 phút, 23 giây </p>
+            <p class="hpbd-text">Chúng mình đã yêu nhau được <span class="time">1 năm, 3 tháng, 4 ngày, 15 giờ, 49 phút, 23 giây</span> </p>
             <p class="hpbd-text">Mong rằng tình yêu của chúng ta sẽ luôn bền vững 💏 trước mọi sóng gió  <br/> Anh chẳng sợ gì đâu vì anh to bằng cả thế giới này  </p>
             <p class="hpbd-text">🐶 Đưa tay 👫 đây nào mãi bên nhau bạn nhớ 🦴</p>
           </div>
@@ -60,7 +65,7 @@
     </div>
     <div class="grid">
       <div class="grid_row">
-        <div class="video-log">
+        <div class="video-log hidden">
           <form class="video-box">
             <iframe src="https://www.youtube.com/embed/cO6zlPlCPUY?autoplay=1&mute=2" frameborder="0" id="our-video"></iframe>
             <div class="love-message">
@@ -70,59 +75,62 @@
                 <br> Mặc dù là năm nay sẽ không đi chơi được, nhưng đừng buồn nghe. 
                 Mong sao hết dịch rồi mình đi chơi bù ha, đi xa xa xa nhiều nhiều nơi luôn. 
               </p>
+              <button class="btn btn-primary mr" id="btn-close"> <i class="far fa-heart"></i></button>
             </div>
+           
           </form>
 
         </div>
       </div>
+      <div id="merrywrap" class="merrywra">
+        <div class="giftbo">
+            <div class="cover">
+                <div></div>
+            </div>
+            
+            <div class="box"></div>
+        </div>
+        
+        <div class="icons">
+            <div class="row">
+                <span>H</span>
+                <span>a</span>
+                <span>p</span>
+                <span>p</span>
+                <span>y</span>
+                
+            </div>
+            <div class="row">
+                <span>B</span>
+                <span>i</span>
+                <span>r</span>
+                <span>t</span>
+                <span>h</span>
+                <span>d</span>
+                <span>a</span>
+                <span>y</span>
+            </div>
+            
+            <div class="row">
+                <span>M</span>
+                <span>i</span>
+                <span>n</span>
+                <span>e</span>
+                <span>g</span>
+                <span>i</span>
+                <span>r</span>
+                <span>l</span>
+            </div>
+        </div>
+    </div>
     </div>
   </section>
 
-<div id="sea"></div>
 
 
 
-<div id="merrywrap" class="merrywrap">
-    <div class="giftbox">
-        <div class="cover">
-            <div></div>
-        </div>
-        
-        <div class="box"></div>
-    </div>
-    
-    <div class="icons">
-        <div class="row">
-            <span>H</span>
-            <span>a</span>
-            <span>p</span>
-            <span>p</span>
-            <span>y</span>
-            
-        </div>
-        <div class="row">
-            <span>B</span>
-            <span>i</span>
-            <span>r</span>
-            <span>t</span>
-            <span>h</span>
-            <span>d</span>
-            <span>a</span>
-            <span>y</span>
-        </div>
-        
-        <div class="row">
-            <span>M</span>
-            <span>i</span>
-            <span>n</span>
-            <span>e</span>
-            <span>g</span>
-            <span>i</span>
-            <span>r</span>
-            <span>l</span>
-        </div>
-    </div>
-</div>
+
+
 
 <div id="video"></div>
 <canvas id="canvas"></canvas>
@@ -135,11 +143,20 @@
         var bubble = document.createElement("i");
         var x = Math.floor(Math.random() * window.innerWidth);
         var y = Math.floor(Math.random() * window.innerHeight);
-        var size = Math.random() * 10;
+        var size = Math.random() * 11;
+        
         bubble.style.left = x+'px';
         bubble.style.top = y+'px';
-        bubble.style.width = 1+size+ 'px';
-        bubble.style.height = 1+size+'px';
+        //bubble.style.width = 1+size+ 'px';
+        //bubble.style.height = 1+size+'px';
+
+        bubble.style.fontSize = 1+size+'px';
+        if (size > 7) {
+          bubble.className = "fas fa-heart";
+        }
+        else if(size < 7) {
+          bubble.className = "far fa-heart";
+        }
         section.appendChild(bubble);
         i++;
       }
@@ -441,11 +458,7 @@
         w = 255;h = 155;
       }
 
-      var ifrm = document.createElement("iframe");
-      ifrm.setAttribute("src", "https://www.youtube.com/watch?v=D9aHXGb_ABs");
-      //ifrm.style.width = `${w}px`;
-      //ifrm.style.height = `${h}px`;
-      ifrm.style.border = 'none';
+
       document.querySelector('#video').appendChild(ifrm);
     }
 
